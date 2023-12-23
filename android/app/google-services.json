@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "134533345761",
+    "project_id": "toody-cc1bc",
+    "storage_bucket": "toody-cc1bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134533345761:android:6bb8ae70c1594720b7a2a0",
+        "android_client_info": {
+          "package_name": "com.example.toody"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5CJGImfCXGw0ie6LnGHSwbuH-_aC5XVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
