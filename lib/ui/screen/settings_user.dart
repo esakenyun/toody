@@ -46,69 +46,70 @@ class UserSetting extends StatelessWidget {
                   ],
                 ),
               ),
-              body: Column(
-                children: [
-                  const SizedBox(height: 20), // Reduced spacing here
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/avatar.png',
-                        height: 100,
-                        width: 100,
-                        fit: BoxFit.cover,
-                      ),
-                      const SizedBox(height: 20), // Reduced spacing here
-                      Text(
-                        fullname,
-                        style: GoogleFonts.poppins(
-                          fontSize: 18.0,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 100),
-                        child: Text(
-                          'to be continued',
-                          style: GoogleFonts.poppins(
-                              fontSize: 12, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
-                    child: Divider(
-                      thickness: 1.5,
-                      color: Colors.grey.shade300,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+              body: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(height: 20), // Reduced spacing here
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(
-                          onPressed: () {
-                            AuthenticationService().signOut(context);
-                          },
-                          icon: const Icon(CupertinoIcons.square_arrow_left),
+                        Image.asset(
+                          'assets/images/avatar.png',
+                          height: 100,
+                          width: 100,
+                          fit: BoxFit.cover,
                         ),
-                        const SizedBox(
-                            width:
-                                8), // Add some spacing between the icon and text
-                        const Text(
-                          'Sign Out',
-                          style: TextStyle(
-                              fontSize: 16), // Adjust the font size as needed
+                        const SizedBox(height: 20), // Reduced spacing here
+                        Text(
+                          fullname,
+                          style: GoogleFonts.poppins(
+                            fontSize: 18.0,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 100),
+                          child: Text(
+                            'to be continued',
+                            style: GoogleFonts.poppins(
+                                fontSize: 12, fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(
-                    height: 50,
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Divider(
+                        thickness: 1.5,
+                        color: Colors.grey.shade300,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          IconButton(
+                            onPressed: () {
+                              AuthenticationService().signOut(context);
+                            },
+                            icon: const Icon(CupertinoIcons.square_arrow_left),
+                          ),
+                          const SizedBox(
+                              width:
+                                  8), // Add some spacing between the icon and text
+                          const Text(
+                            'Sign Out',
+                            style: TextStyle(
+                                fontSize: 16), // Adjust the font size as needed
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    )
+                  ],
+                ),
               ),
             );
           } else {
