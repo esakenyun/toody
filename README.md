@@ -54,6 +54,7 @@ With these basic features, Toody can fulfill the basic needs of users to manage 
 
 ## Requirements
 
+Flutter sdk: 3.1.1 
 
 
 ## Installation
