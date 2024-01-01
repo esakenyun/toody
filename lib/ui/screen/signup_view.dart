@@ -142,12 +142,10 @@ class _SignupViewState extends State<SignupView> {
                       decoration: InputDecoration(
                         contentPadding:
                             const EdgeInsets.only(left: 15, right: 10),
-
                         hintText: 'Email',
                         hintStyle: const TextStyle(
                           color: Color(0xFF8391A1),
                         ),
-
                         border: OutlineInputBorder(
                           borderSide: const BorderSide(
                             color: Colors.black26,
@@ -166,8 +164,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        filled:
-                            true, // Aktifkan properti filled untuk mengganti warna latar belakang
+                        filled: true,
                         fillColor: const Color(0xFFF7F8F9),
                       ),
                     ),
@@ -202,12 +199,10 @@ class _SignupViewState extends State<SignupView> {
                       decoration: InputDecoration(
                         contentPadding:
                             const EdgeInsets.only(left: 15, right: 10),
-
                         hintText: 'Password',
                         hintStyle: const TextStyle(
                           color: Color(0xFF8391A1),
                         ),
-
                         border: OutlineInputBorder(
                           borderSide: const BorderSide(
                             color: Colors.black26,
@@ -226,8 +221,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        filled:
-                            true, // Aktifkan properti filled untuk mengganti warna latar belakang
+                        filled: true,
                         fillColor: const Color(0xFFF7F8F9),
                         suffixIcon: InkWell(
                           onTap: () {
@@ -277,7 +271,6 @@ class _SignupViewState extends State<SignupView> {
                       decoration: InputDecoration(
                         contentPadding:
                             const EdgeInsets.only(left: 15, right: 10),
-
                         hintText: 'Confirm password',
                         hintStyle: const TextStyle(
                           color: Color(0xFF8391A1),
@@ -300,8 +293,7 @@ class _SignupViewState extends State<SignupView> {
                           ),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        filled:
-                            true, // Aktifkan properti filled untuk mengganti warna latar belakang
+                        filled: true,
                         fillColor: const Color(0xFFF7F8F9),
                         suffixIcon: InkWell(
                           onTap: () {
@@ -353,7 +345,7 @@ class _SignupViewState extends State<SignupView> {
                                 } else {
                                   await AuthenticationRemote().signup(
                                       fullname.text, email.text, password.text);
-                                  // Pendaftaran berhasil, tampilkan pesan atau lakukan tindakan lainnya
+
                                   if (!context.mounted) return;
                                   Navigator.pushReplacement(
                                     context,
@@ -370,9 +362,8 @@ class _SignupViewState extends State<SignupView> {
                                   );
                                 }
                               } catch (e) {
-                                // Tangani error jika pendaftaran gagal
                                 FlutterToastr.show(
-                                  '$e', // Menampilkan pesan kesalahan dari exception
+                                  '$e',
                                   context,
                                   backgroundColor: Colors.red.shade300,
                                   position: FlutterToastr.bottom,

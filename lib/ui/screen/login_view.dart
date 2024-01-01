@@ -104,9 +104,9 @@ class _LoginViewState extends State<LoginView> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         filled:
-                            true, // Aktifkan properti filled untuk mengganti warna latar belakang
+                            true, 
                         fillColor: const Color(
-                            0xFFF7F8F9), // Sesuaikan warna latar belakang
+                            0xFFF7F8F9), 
                       ),
                     ),
                   ),
@@ -229,7 +229,7 @@ class _LoginViewState extends State<LoginView> {
                               try {
                                 await AuthenticationRemote()
                                     .login(email.text, password.text);
-                                // Jika login berhasil, pop halaman saat ini dan pindah ke halaman beranda atau halaman lainnya
+                                
                                 if (!context.mounted) return;
                                 Navigator.pushReplacement(
                                   context,
@@ -247,7 +247,7 @@ class _LoginViewState extends State<LoginView> {
                                       Colors.green.withOpacity(0.7),
                                 );
                               } catch (e) {
-                                // Tangani kesalahan login jika diperlukan
+                               
                                 FlutterToastr.show(
                                   '$e',
                                   context,

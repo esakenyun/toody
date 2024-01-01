@@ -13,7 +13,7 @@ class UserSetting extends StatelessWidget {
         future: firestoreDatasource.getLoggedInUserName(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            String fullname = snapshot.data!; // Dapatkan fullname
+            String fullname = snapshot.data!; // Get fullname
             return Scaffold(
               backgroundColor: Colors.white,
               appBar: PreferredSize(
@@ -49,7 +49,7 @@ class UserSetting extends StatelessWidget {
               body: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const SizedBox(height: 20), // Reduced spacing here
+                    const SizedBox(height: 20), 
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -59,7 +59,7 @@ class UserSetting extends StatelessWidget {
                           width: 100,
                           fit: BoxFit.cover,
                         ),
-                        const SizedBox(height: 20), // Reduced spacing here
+                        const SizedBox(height: 20), 
                         Text(
                           fullname,
                           style: GoogleFonts.poppins(
@@ -96,11 +96,11 @@ class UserSetting extends StatelessWidget {
                           ),
                           const SizedBox(
                               width:
-                                  8), // Add some spacing between the icon and text
+                                  8), 
                           const Text(
                             'Sign Out',
                             style: TextStyle(
-                                fontSize: 16), // Adjust the font size as needed
+                                fontSize: 16), 
                           ),
                         ],
                       ),
@@ -115,7 +115,7 @@ class UserSetting extends StatelessWidget {
           } else {
             return const Scaffold(
               body: Center(
-                  child: CircularProgressIndicator()), // Tampilkan loading
+                  child: CircularProgressIndicator()), 
             );
           }
         },
